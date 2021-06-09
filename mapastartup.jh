@@ -1,0 +1,29 @@
+
+
+entity Startup {
+	nome String,
+	segmento String,
+	descricao String
+}
+
+entity Membro {
+	nome String,
+	funcao String
+}
+
+relationship OneToMany {
+	Startup to Membro{startup},
+}
+
+// Set pagination options
+paginate Startup with infinite-scroll
+
+// Use Data Transfer Objects (DTO)
+ dto * with mapstruct
+
+// Set service options to all except few
+service Startup with serviceImpl
+
+
+// Set an angular suffix
+// angularSuffix * with mySuffix
