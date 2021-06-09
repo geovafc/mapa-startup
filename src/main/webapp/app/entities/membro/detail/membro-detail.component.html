@@ -1,0 +1,42 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="membro">
+      <h2 data-cy="membroDetailsHeading"><span jhiTranslate="mapaStartupApp.membro.detail.title">Membro</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ membro.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="mapaStartupApp.membro.nome">Nome</span></dt>
+        <dd>
+          <span>{{ membro.nome }}</span>
+        </dd>
+        <dt><span jhiTranslate="mapaStartupApp.membro.funcao">Funcao</span></dt>
+        <dd>
+          <span>{{ membro.funcao }}</span>
+        </dd>
+        <dt><span jhiTranslate="mapaStartupApp.membro.startup">Startup</span></dt>
+        <dd>
+          <div *ngIf="membro.startup">
+            <a [routerLink]="['/startup', membro.startup?.id, 'view']">{{ membro.startup?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/membro', membro.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

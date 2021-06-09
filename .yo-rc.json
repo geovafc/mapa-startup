@@ -42,7 +42,9 @@
     "jwtSecretKey": "YmE3Y2FiNDNjY2E3NmM4M2NlNDJlZGIwZWVkNDlmN2EzZjAwNDY2NDJkMmFiMWM1MzZkMTY1NmQxOTczMTBiYmY0ZmY1MjJjMjU5MzEyYWIwMWIyNmU2ODdjMmRlNGYxYjZkNzljYjg3MTBkNGNlOTE5NjRjOThmODgxYjUzNjU=",
     "clientTheme": "none",
     "clientThemeVariant": "",
-    "reactive": false
+    "reactive": false,
+    "entities": ["Startup", "Membro"],
+    "lastLiquibaseTimestamp": 1623245737000
   },
   "git-provider": "GitHub",
   "git-company": "geovafc",

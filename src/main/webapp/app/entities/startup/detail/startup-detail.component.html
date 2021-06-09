@@ -1,0 +1,40 @@
+<div class="row justify-content-center">
+  <div class="col-8">
+    <div *ngIf="startup">
+      <h2 data-cy="startupDetailsHeading"><span jhiTranslate="mapaStartupApp.startup.detail.title">Startup</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ startup.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="mapaStartupApp.startup.nome">Nome</span></dt>
+        <dd>
+          <span>{{ startup.nome }}</span>
+        </dd>
+        <dt><span jhiTranslate="mapaStartupApp.startup.segmento">Segmento</span></dt>
+        <dd>
+          <span>{{ startup.segmento }}</span>
+        </dd>
+        <dt><span jhiTranslate="mapaStartupApp.startup.descricao">Descricao</span></dt>
+        <dd>
+          <span>{{ startup.descricao }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/startup', startup.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

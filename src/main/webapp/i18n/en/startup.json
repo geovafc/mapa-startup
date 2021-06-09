@@ -1,0 +1,27 @@
+{
+  "mapaStartupApp": {
+    "startup": {
+      "home": {
+        "title": "Startups",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Startup",
+        "createOrEditLabel": "Create or edit a Startup",
+        "notFound": "No Startups found"
+      },
+      "created": "A new Startup is created with identifier {{ param }}",
+      "updated": "A Startup is updated with identifier {{ param }}",
+      "deleted": "A Startup is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Startup {{ id }}?"
+      },
+      "detail": {
+        "title": "Startup"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "segmento": "Segmento",
+      "descricao": "Descricao",
+      "membro": "Membro"
+    }
+  }
+}

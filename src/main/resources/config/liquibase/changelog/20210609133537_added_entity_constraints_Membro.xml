@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.3.xsd">
+    <!--
+        Added the constraints for entity Membro.
+    -->
+    <changeSet id="20210609133537-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="startup_id"
+                                 baseTableName="membro"
+                                 constraintName="fk_membro__startup_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="startup"/>
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,27 @@
+{
+  "mapaStartupApp": {
+    "startup": {
+      "home": {
+        "title": "Startups",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Startup",
+        "createOrEditLabel": "Criar ou editar Startup",
+        "notFound": "Nenhum Startup encontrado"
+      },
+      "created": "Um novo Startup foi criado com o identificador {{ param }}",
+      "updated": "Um Startup foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Startup foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Startup {{ id }}?"
+      },
+      "detail": {
+        "title": "Startup"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "segmento": "Segmento",
+      "descricao": "Descricao",
+      "membro": "Membro"
+    }
+  }
+}

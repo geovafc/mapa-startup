@@ -1,0 +1,76 @@
+<div>
+  <h2 id="page-heading" data-cy="MembroHeading">
+    <span jhiTranslate="mapaStartupApp.membro.home.title">Membros</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info mr-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="mapaStartupApp.membro.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-membro"
+        [routerLink]="['/membro/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="mapaStartupApp.membro.home.createLabel"> Create a new Membro </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="membros?.length === 0">
+    <span jhiTranslate="mapaStartupApp.membro.home.notFound">No membros found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="membros && membros.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="mapaStartupApp.membro.nome">Nome</span></th>
+          <th scope="col"><span jhiTranslate="mapaStartupApp.membro.funcao">Funcao</span></th>
+          <th scope="col"><span jhiTranslate="mapaStartupApp.membro.startup">Startup</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let membro of membros; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/membro', membro.id, 'view']">{{ membro.id }}</a>
+          </td>
+          <td>{{ membro.nome }}</td>
+          <td>{{ membro.funcao }}</td>
+          <td>
+            <div *ngIf="membro.startup">
+              <a [routerLink]="['/startup', membro.startup?.id, 'view']">{{ membro.startup?.id }}</a>
+            </div>
+          </td>
+          <td class="text-right">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/membro', membro.id, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/membro', membro.id, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(membro)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

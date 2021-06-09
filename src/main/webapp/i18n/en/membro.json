@@ -1,0 +1,26 @@
+{
+  "mapaStartupApp": {
+    "membro": {
+      "home": {
+        "title": "Membros",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Membro",
+        "createOrEditLabel": "Create or edit a Membro",
+        "notFound": "No Membros found"
+      },
+      "created": "A new Membro is created with identifier {{ param }}",
+      "updated": "A Membro is updated with identifier {{ param }}",
+      "deleted": "A Membro is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Membro {{ id }}?"
+      },
+      "detail": {
+        "title": "Membro"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "funcao": "Funcao",
+      "startup": "Startup"
+    }
+  }
+}

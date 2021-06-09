@@ -1,0 +1,26 @@
+{
+  "mapaStartupApp": {
+    "membro": {
+      "home": {
+        "title": "Membros",
+        "refreshListLabel": "Atualizar lista",
+        "createLabel": "Criar novo Membro",
+        "createOrEditLabel": "Criar ou editar Membro",
+        "notFound": "Nenhum Membro encontrado"
+      },
+      "created": "Um novo Membro foi criado com o identificador {{ param }}",
+      "updated": "Um Membro foi atualizado com o identificador {{ param }}",
+      "deleted": "Um Membro foi excluído com o identificador {{ param }}",
+      "delete": {
+        "question": "Tem certeza de que deseja excluir Membro {{ id }}?"
+      },
+      "detail": {
+        "title": "Membro"
+      },
+      "id": "ID",
+      "nome": "Nome",
+      "funcao": "Funcao",
+      "startup": "Startup"
+    }
+  }
+}
